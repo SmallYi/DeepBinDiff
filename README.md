@@ -51,3 +51,8 @@ The current version is using CPU only.
 4. NLP pre-training?
 
 The current version uses an on-the-fly training process, meaning we only use the two input binaries for NLP training. Therefore, we don't need any pre-trained model. This will eliminate the OOV problem but will slow down the process a bit.
+
+
+### 记录
+1. tensorflow2.0版本下需修改导入命令为</br>import tensorflow.compat.v1 as tf</br>tf.disable_v2_behavior()</br>
+2. 在根目录运行.src_js/start_test_js.sh 因为有的文件使用相对路径
