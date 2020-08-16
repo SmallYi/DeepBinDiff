@@ -59,3 +59,4 @@ The current version uses an on-the-fly training process, meaning we only use the
 3. 使用GPU运行时会报错，有些操作只能在cpu进行，不按照以下方式进行，可能会出错。</br>
 config = tf.ConfigProto(allow_soft_placement = True)</br>
 sess = tf.Session(config = config)</br>
+4. 源程序是基本块级别的比较，输出的匹配对是基本块id的匹配对
