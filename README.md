@@ -56,3 +56,6 @@ The current version uses an on-the-fly training process, meaning we only use the
 ### 记录
 1. tensorflow2.0版本下需修改导入命令为</br>import tensorflow.compat.v1 as tf</br>tf.disable_v2_behavior()</br>
 2. 在根目录运行.src_js/start_test_js.sh 因为有的文件使用相对路径
+3. 使用GPU运行时会报错，有些操作只能在cpu进行，不按照以下方式进行，可能会出错。</br>
+config = tf.ConfigProto(allow_soft_placement = True)</br>
+sess = tf.Session(config = config)</br>
